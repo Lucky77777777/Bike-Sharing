@@ -173,7 +173,7 @@ with col3:
 
 # Tren Peminjaman
 st.header("Tren Jumlah Peminjaman Sepeda")
-st.pyplot(plot_bike_rental(df_day))
+# st.pyplot(plot_bike_rental(df_day))
 
 season_dict = {1: "🌸 Springer", 2: "☀️ Summer", 3: "🍂 Fall" , 4: "❄️ Winter"}
 cuaca_dict = {
