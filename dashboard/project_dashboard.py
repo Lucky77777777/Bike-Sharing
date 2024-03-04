@@ -24,12 +24,10 @@ def plot_bike_rental(df):
     plt.style.use('dark_background')
     fig, ax = plt.subplots(figsize=(25, 12))
 
-    # Mengurutkan dataframe berdasarkan kolom 'dteday'
-    df_sorted = df.sort_values('dteday')
+    ax.plot(df['dteday'], df['casual'], linestyle='--', color='skyblue', label='Casual')
+    ax.plot(df['dteday'], df['registered'], linestyle='--', color='salmon', label='Registered')
 
-    ax.plot(df_sorted['dteday'], df_sorted['casual'], linestyle='--', color='skyblue', label='Casual')
-    ax.plot(df_sorted['dteday'], df_sorted['registered'], linestyle='--', color='salmon', label='Registered')
-    ax.plot(df_sorted['dteday'], df_sorted['cnt'], linestyle='-', color='forestgreen', label='Total')
+    ax.plot(df['dteday'], df['cnt'], linestyle='-', color='forestgreen', label='Total')
 
     ax.legend(['Casual', 'Registered', 'Total'], fontsize='large')
 
@@ -173,7 +171,7 @@ with col3:
 
 # Tren Peminjaman
 st.header("Tren Jumlah Peminjaman Sepeda")
-# st.pyplot(plot_bike_rental(df_day))
+st.pyplot(plot_bike_rental(df_day))
 
 season_dict = {1: "🌸 Springer", 2: "☀️ Summer", 3: "🍂 Fall" , 4: "❄️ Winter"}
 cuaca_dict = {
