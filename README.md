@@ -1,10 +1,8 @@
-# Dicoding Collection Dashboard ✨
+# Bike Sharing Dashboard ✨
 
-## Setup environment
+## Setup environment: Google Colab
 ```
-conda create --name main-ds python=3.9
-conda activate main-ds
-pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
+1. Jalankan pip install streamlit
 ```
 
 ## Run steamlit app
